@@ -2,7 +2,7 @@ import * as React from "react";
 import { ReactAnchorAttr, ShapeOf } from "../../../typings/shared";
 
 export interface LinkPropsBase {
-    element?: string, // required but has default value
+    element?: string | React.JSXElementConstructor<any>, // required but has default value
 }
 
 export type LinkProps<E extends object = ReactAnchorAttr> = ShapeOf<LinkPropsBase, E>;
